@@ -5,6 +5,7 @@ Declratively fill up candid conversations
 
 - Setup `.venv` with requirements.txt
 - Run `playwright install`
+- Replace `email` and `password` appropriately so that the script can login to qualtrics to submit the form
 - Setup `cc.csv` with appropriate information
 - Run `python main.py`
 
