@@ -1,3 +1,5 @@
+import time
+
 import pandas as pd
 from playwright.sync_api import sync_playwright
 
@@ -17,14 +19,16 @@ def fill_resident_form():
             print(f"[{index + 1}/{len(df)}] Filling form for: {row['name']}")
 
             page.goto("https://msu.co1.qualtrics.com/jfe/form/SV_6uliglPIZF68XKS")
+            time.sleep(3)
 
             # --- Login Logic ---
             if "auth" in page.url:
+                print("Login detecting, attempting authorization")
                 try:
                     page.get_by_label("email").wait_for(state="visible", timeout=5000)
 
                     print("Login input visible. Starting login process...")
-                    page.get_by_label("email").fill("")
+                    page.get_by_label("email").fill("srivas75")
                     page.get_by_role("button", name="Next").click()
 
                     page.get_by_role("button", name="Password").click()
@@ -33,7 +37,7 @@ def fill_resident_form():
                         page.get_by_role("textbox")
                     )
                     password_field.wait_for(state="visible", timeout=45000)
-                    password_field.fill("")
+                    password_field.fill("PASSWORD")
                     page.get_by_role("button", name="Verify").click()
 
                 except:
@@ -144,8 +148,10 @@ def fill_resident_form():
                 )
 
             # Final Submit
+            time.sleep(2)
             page.get_by_role("button", name="Next").click()
             print(f"Successfully submitted for {row['name']}")
+            time.sleep(1)
 
         browser.close()
 
