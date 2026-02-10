@@ -27,14 +27,16 @@ Declaratively fill up candid conversations
 | **is_successful** | str | If a conversation occurred. | yes, no |
 
 ## Table to fill if outreach was successful
-
+| Column Name | Data Type | Description | All Possible / Example Values |
+| --- | --- | --- | --- |
 | **success_date** | date | Date of interaction (MM/DD/YY). | e.g., 01/20/26 |
 | **success_summary** | str | Narrative of the talk (min 2–3 sentences). | 2/3 sentences describing what you talked about. |
 | **keywords** | str | Primary Topic. | Pick one from here - Academic challenges, Academic success, Campus navigation, Campus resources, Career or professional development, Conflict management, Cross cultural engagement, Involvement, Mental or emotional or physical or spiritual well being, Relationship building, Sense of belonging |
 | **follow_up_info** | str | Future action notes. | eg. Follow up to give resident xyz resource. |
 
 ## Table to fill if outreach was unsuccessful
-
+| Column Name | Data Type | Description | All Possible / Example Values |
+| --- | --- | --- | --- |
 | **attempt_count** | str | Number of failed attempts. | Pick one from -  1, 2 to 3, 4 or more |
 | **attempt_dates** | str | Dates of outreach attempts. | Comma-separated list (e.g., 01/22/26, 01/24/26) |
 | **strategies** | str | Method of Outreach. | Pick one from here - Knocked on door, Text message, Email, Social media or messaging app |
