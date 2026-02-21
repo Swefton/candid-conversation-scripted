@@ -43,3 +43,7 @@ Declaratively fill up candid conversations
 | **challenges** | str | Barrier to Interaction. | Pick one from here - Scheduling conflicts, Resident declined or avoided interaction, Resident seemed disinterested or disengaged, Resident was unavailable |
 | **effort_narrative** | str | Outreach explanation. | 1–2 sentences explaining how you tried to reach out to resident. |
 | **future_plan** | str | Next steps for contact. | e.g., "Find more time to speak in the hallway" |
+
+```
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+```
